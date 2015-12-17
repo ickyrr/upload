@@ -1,0 +1,36 @@
+<head>
+  <title>upload</title>
+</head>
+
+<body>
+  {{> loginButtons}}
+  {{#if currentUser}}
+    <h1>Welcome to Meteor!</h1>
+
+    {{> hello}}
+
+    {{> show}}
+    {{> list}}
+  {{/if}}
+</body>
+
+<template name="hello">
+  <form class="upload-form">
+    <input type="file" name="file" class="myFileInput">
+    <button type="submit" name="upload">Upload</button>
+  </form>
+</template>
+
+<template name="show">
+  <div class="profile-pic">
+    <img src="{{theImage}}" alt="" />
+  </div>
+</template>
+
+<template name="list">
+  <div class="image-list">
+    {{#each images}}
+    <a href="#" id="changePic"><img src="/cfs/files/images/{{_id}}" alt="" /></a>
+    {{/each}}
+  </div>
+</template>

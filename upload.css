@@ -1,0 +1,9 @@
+.profile-pic img{
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+}
+.image-list img{
+  width: 200px;
+  height: 200px;
+}
